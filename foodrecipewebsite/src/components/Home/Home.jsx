@@ -1,7 +1,9 @@
 import React from "react";
 import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/700.css"; // Bold
-
+import { Link, NavLink } from "react-router-dom";
+import Card from "../Card/Card";
+import Recipes from "../Recipes/Recipes";
 function Home() {
   return (
     <>
@@ -37,27 +39,56 @@ function Home() {
         </div>
       </div>
       <div className="flex justify-center gap-[37px]">
-        <div className="flex  h-[80px]  w-[240px] text-white rounded-xl p-[25px] justify-around" style={{backgroundColor:"#F6784C"}}>
-          <p>Recipes & Menus</p>
-          <img src="/src/assets/images/rightarrow2.svg" alt="" />
-        </div>
-        <div className="flex justify-around h-[80px] w-[240px]  text-white rounded-xl p-[25px]" style={{backgroundColor:"#C4D600"}}>
-          <p>Share your recipe</p>
-          <img src="/src/assets/images/rightarrow2.svg" alt="" />
-        </div>
-        <div className="flex justify-around h-[80px]  w-[240px] text-white rounded-xl p-[25px]" style={{backgroundColor:"#EAAA00"}}>
-          <p>Custom meal plan</p>
-          <img src="/src/assets/images/rightarrow2.svg" alt="" />
-        </div>
-        <div className="flex justify-around h-[80px] w-[240px]  text-white rounded-xl p-[25px]" style={{backgroundColor:"#ED8B00"}}>
-          <p>Create grocery list</p>
-          <img src="/src/assets/images/rightarrow2.svg" alt="" />
-        </div>
-        <div className="flex justify-around h-[80px]  w-[240px] text-white rounded-xl p-[25px]" style={{backgroundColor:"#84BD00"}}>
-          <p>Cooking Tips & Tricks</p>
-          <img src="/src/assets/images/rightarrow2.svg" alt="" />
-        </div>
+        <NavLink to="/recipesandmenus">
+          <div
+            className="flex  h-[80px]  w-[240px] text-white rounded-xl p-[25px] justify-around"
+            style={{ backgroundColor: "#F6784C" }}
+          >
+            <p>Recipes & Menus</p>
+            <img src="/src/assets/images/rightarrow2.svg" alt="" />
+          </div>
+        </NavLink>
+        <NavLink to="/sharerecipe">
+          <div
+            className="flex justify-around h-[80px] w-[240px]  text-white rounded-xl p-[25px]"
+            style={{ backgroundColor: "#C4D600" }}
+          >
+            <p>Share your recipe</p>
+            <img src="/src/assets/images/rightarrow2.svg" alt="" />
+          </div>
+        </NavLink>
+        <NavLink to="/custommealplan">
+          <div
+            className="flex justify-around h-[80px]  w-[240px] text-white rounded-xl p-[25px]"
+            style={{ backgroundColor: "#EAAA00" }}
+          >
+            <p>Custom meal plan</p>
+            <img src="/src/assets/images/rightarrow2.svg" alt="" />
+          </div>
+        </NavLink>
+        <NavLink to="/creategrocerylist">
+          <div
+            className="flex justify-around h-[80px] w-[240px]  text-white rounded-xl p-[25px]"
+            style={{ backgroundColor: "#ED8B00" }}
+          >
+            <p>Create grocery list</p>
+            <img src="/src/assets/images/rightarrow2.svg" alt="" />
+          </div>
+        </NavLink>
+        <NavLink to="/cookingtipsandtricks">
+          <div
+            className="flex justify-around h-[80px]  w-[240px] text-white rounded-xl p-[25px]"
+            style={{ backgroundColor: "#84BD00" }}
+          >
+            <p>Cooking Tips & Tricks</p>
+            <img src="/src/assets/images/rightarrow2.svg" alt="" />
+          </div>
+        </NavLink>
       </div>
+
+        <Recipes />
+
+
     </>
   );
 }

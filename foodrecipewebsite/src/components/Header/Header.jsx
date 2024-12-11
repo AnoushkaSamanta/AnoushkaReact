@@ -13,8 +13,13 @@ function Header() {
         </div>
         <div className="flex">
           <div className="bg-gray-200 h-[40px]  flex justify-between p-[5px] rounded">
-            <label htmlFor="">All categories</label>
-            <select name="" id="" className="bg-gray-200"></select>
+            <select name="" id="" className="bg-gray-200">
+              <option value="All categories">All categories</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+             
+            </select>
             <input
               type="text"
               placeholder=" | Search for recipes..."
