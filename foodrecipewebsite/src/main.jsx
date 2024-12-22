@@ -24,12 +24,13 @@ import ShareRecipe from "./components/ShareRecipe/ShareRecipe.jsx";
 import CustomMealPlan from "./components/CustomMealPlan/CustomMealPlan.jsx";
 import CreateGroceryList from "./components/CreateGroceryList/CreateGroceryList.jsx";
 import CookingTipsTricks from "./components/CookingTipsTricks/CookingTipsTricks.jsx";
-
+import SearchRecipe from "./components/SearchRecipe/SearchRecipe.jsx";
+import RecipeDetails from "./components/RecipeDetails/RecipeDetails.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-
+     
       <Route path="recipesandmenus" element={<RecipesMenus />} />
       <Route path="sharerecipe" element={<ShareRecipe />} />
       <Route path="custommealplan" element={<CustomMealPlan />} />
@@ -44,6 +45,10 @@ const router = createBrowserRouter(
       <Route path="usecases" element={<UseCases />} />
       <Route path="testimonials" element={<Testimonials />} />
       <Route path="insights" element={<Insights />} />
+      <Route path="searchrecipe" element={<SearchRecipe />} />
+
+      
+<Route path="recipe/:rname" element={<RecipeDetails />} />
     </Route>
   )
 );

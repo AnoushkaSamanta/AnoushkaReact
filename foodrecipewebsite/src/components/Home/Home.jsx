@@ -4,6 +4,7 @@ import "@fontsource/poppins/700.css"; // Bold
 import { Link, NavLink } from "react-router-dom";
 import Card from "../Card/Card";
 import Recipes from "../Recipes/Recipes";
+import RecipeContext from "../../contexts/RecipeContext";
 function Home() {
   return (
     <>
@@ -85,7 +86,7 @@ function Home() {
           </div>
         </NavLink>
       </div>
-
+     
         <Recipes />
 
 
