@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
-  const [currentStartId, setCurrentStartId] = useState(52851); // Starting ID for recipes
+  const [currentStartId, setCurrentStartId] = useState(52821); // Starting ID for recipes
 
   useEffect(() => {
     fetchRecipes(currentStartId);
@@ -13,7 +13,9 @@ function Recipes() {
     const recipeIds = Array.from({ length: 8 }, (_, index) => startId + index); // Generate range of IDs
     const responses = await Promise.all(
       recipeIds.map((id) =>
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`).then((res) => res.json())
+        fetch(
+          `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+        ).then((res) => res.json())
       )
     );
 
