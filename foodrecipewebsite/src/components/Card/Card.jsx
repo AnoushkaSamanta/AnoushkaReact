@@ -5,15 +5,20 @@ import { useNavigate } from "react-router-dom";
 function Card(props) {
   const [isRed, setIsRed] = useState(false);
   const [isYellow, setIsYellow] = useState(false);
+
   const navigate = useNavigate();
 
 
-  const toggleHeartColor = () => {
+  const toggleHeartColor = (e) => {
+    e.stopPropagation();
     setIsRed(!isRed);
+
   };
 
-  const toggleStarColor = () => {
+  const toggleStarColor = (e) => {
+    e.stopPropagation();
     setIsYellow(!isYellow);
+
   };
 
   const handleCardClick = () => {
