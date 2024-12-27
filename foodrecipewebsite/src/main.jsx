@@ -25,7 +25,10 @@ import CustomMealPlan from "./components/CustomMealPlan/CustomMealPlan.jsx";
 import CreateGroceryList from "./components/CreateGroceryList/CreateGroceryList.jsx";
 import CookingTipsTricks from "./components/CookingTipsTricks/CookingTipsTricks.jsx";
 import SearchRecipe from "./components/SearchRecipe/SearchRecipe.jsx";
-import RecipeDetails from "./components/RecipeDetails/RecipeDetails.jsx";
+import RecipeDetail from './Components/Home/RecipeDetail.jsx';
+import { Provider } from 'react-redux'
+import { store } from './store'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -46,14 +49,13 @@ const router = createBrowserRouter(
       <Route path="testimonials" element={<Testimonials />} />
       <Route path="insights" element={<Insights />} />
       <Route path="searchrecipe" element={<SearchRecipe />} />
-
-      
-<Route path="recipe/:rname" element={<RecipeDetails />} />
+      <Route path="recipe/:id" element={<RecipeDetail />} />
     </Route>
   )
 );
 createRoot(document.getElementById("root")).render(
   <>
-    <RouterProvider router={router} />
+   <Provider store={store}>
+    <RouterProvider router={router} /></Provider>
   </>
 );
