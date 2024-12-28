@@ -67,8 +67,7 @@ function Footer() {
             <img src="/src/assets/images/logo.png" alt="" />
             <br />
             <p>
-              Ut risus mattis interdum faucibus facilisi. Facilisi purus
-              accumsan aliquam.
+              Subscribe for daily blogs and more recipes
             </p>
             <br />
             <div className="flex gap-[7px] ">
