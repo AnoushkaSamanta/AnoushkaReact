@@ -26,8 +26,8 @@ function Header() {
         style={{ fontFamily: "Poppins, sans-serif" }}
       >
         <div className="h-[35px] w-[115px] flex justify-between">
-          <img src="/src/assets/images/hamburger.svg" alt="menu" />
-          <img src="/src/assets/images/logo.png" alt="logo" />
+          <img src="/src/assets/images/hamburger.svg" alt="menu" className="hidden" />
+          <img src="/src/assets/images/logo.png" alt="logo" width="96px" height="60px"/>
         </div>
         <div className="flex">
           <div className="bg-gray-200 h-[40px] flex justify-between p-[5px] rounded">
@@ -59,7 +59,7 @@ function Header() {
           <ul className="flex justify-between w-[200px]">
             <li>
               <NavLink
-                to="/"
+                to="/home"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-green-700" : "text-gray-700"
