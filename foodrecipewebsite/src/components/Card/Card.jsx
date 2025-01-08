@@ -37,7 +37,7 @@ function Card(props) {
       <div>
         <p style={{ color: "#A1A1A1" }}>{props.strCategory}</p>
         <div className="flex justify-between mb-[10px]">
-          <h1 className="text-2xl font-bold">{props.strMeal}</h1>
+          <h1 className="text-xl font-bold">{props.strMeal}</h1>
           <div className="flex flex-col mr-[5px]">
             <img
               src={
